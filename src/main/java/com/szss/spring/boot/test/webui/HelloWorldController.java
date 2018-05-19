@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
  */
 
 @Controller
-public class HelloWorld {
+public class HelloWorldController {
 
     @Autowired
     private UserMapper userMapper;

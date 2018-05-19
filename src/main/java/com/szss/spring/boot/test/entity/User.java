@@ -5,7 +5,8 @@ import lombok.Data;
 /**
  * Created by zcg on 15/12/25.
  */
-@Data public class User {
+@Data
+public class User {
     private Long id;
     private String username;
 }
