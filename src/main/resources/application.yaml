@@ -4,10 +4,10 @@ server:
 spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
-    url: jdbc:sqlserver://127.0.0.1:1433;databaseName=app_data_base;loginTimeout=30;
-    username: sa
-    password: yourStrong(!)Password
-    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    url: jdbc:mysql://127.0.0.1:3306/nutwood?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&failOverReadOnly=false
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
     druid:
       validationQuery: SELECT 1
       initialSize: 10
@@ -24,6 +24,7 @@ spring:
 
 mybatis:
   config-location: classpath:mybatis-config.xml
+  typeHandlersPackage: com.szss.spring.boot.test.handler
 
 
 

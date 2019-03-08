@@ -1,6 +1,8 @@
 package com.szss.spring.boot.test.webui;
 
 import com.szss.spring.boot.test.entity.User;
+import com.szss.spring.boot.test.handler.GenderCodeEnum;
+import com.szss.spring.boot.test.handler.InvoiceCodeEnum;
 import com.szss.spring.boot.test.mapper.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -30,8 +32,10 @@ public class HelloWorldController {
     @ResponseBody
     public User test() {
         User user = new User();
-        user.setId(100L);
         user.setUsername("test");
+        user.setCode(InvoiceCodeEnum.INVOICE_COUNT_OVERTOP);
+        user.setGender(GenderCodeEnum.FEMALE);
+        userMapper.save(user);
         return user;
     }
 }

@@ -1,1 +1,1 @@
-Hello,${user.username!""}!
+Hello,${user.username!""}!  ${user.code}  ${user.gender}

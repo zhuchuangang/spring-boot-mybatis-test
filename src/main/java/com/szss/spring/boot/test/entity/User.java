@@ -1,5 +1,7 @@
 package com.szss.spring.boot.test.entity;
 
+import com.szss.spring.boot.test.handler.GenderCodeEnum;
+import com.szss.spring.boot.test.handler.InvoiceCodeEnum;
 import lombok.Data;
 
 /**
@@ -9,4 +11,6 @@ import lombok.Data;
 public class User {
     private Long id;
     private String username;
+    private InvoiceCodeEnum code;
+    private GenderCodeEnum gender;
 }
